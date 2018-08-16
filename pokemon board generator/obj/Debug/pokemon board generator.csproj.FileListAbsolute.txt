@@ -1,0 +1,6 @@
+C:\Users\Server\Documents\Visual Studio 2017\Projects\pokemon board generator\pokemon board generator\bin\Debug\pokemon board generator.exe.config
+C:\Users\Server\Documents\Visual Studio 2017\Projects\pokemon board generator\pokemon board generator\bin\Debug\pokemon board generator.exe
+C:\Users\Server\Documents\Visual Studio 2017\Projects\pokemon board generator\pokemon board generator\bin\Debug\pokemon board generator.pdb
+C:\Users\Server\Documents\Visual Studio 2017\Projects\pokemon board generator\pokemon board generator\obj\Debug\pokemon board generator.csprojResolveAssemblyReference.cache
+C:\Users\Server\Documents\Visual Studio 2017\Projects\pokemon board generator\pokemon board generator\obj\Debug\pokemon board generator.exe
+C:\Users\Server\Documents\Visual Studio 2017\Projects\pokemon board generator\pokemon board generator\obj\Debug\pokemon board generator.pdb
