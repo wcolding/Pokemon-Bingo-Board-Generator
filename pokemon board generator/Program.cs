@@ -92,8 +92,8 @@ namespace pokemon_board_generator
         static void Main(string[] args)
         {
             SquarePool myBoard;
-            SquarePool[] pools = new SquarePool[3]
-                { DataSet.genIpokemon, DataSet.genIcleanedup, DataSet.genIfullyevolved };
+            SquarePool[] pools = new SquarePool[4]
+                { DataSet.genIpokemon, DataSet.genIcleanedup, DataSet.genIfullyevolved, DataSet.genIIpokemon};
 
             int userChoice = 2;
 
@@ -101,7 +101,8 @@ namespace pokemon_board_generator
                 "Choose mode:\n" +
                 "1. Full 151\n" +
                 "2. Starters Evolved\n" +
-                "3. All Evolved\n");
+                "3. All Evolved\n" +
+                "4. Gen I + II Full");
             Console.Write("? ");
 
             try {
