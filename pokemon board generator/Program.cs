@@ -92,17 +92,18 @@ namespace pokemon_board_generator
         static void Main(string[] args)
         {
             SquarePool myBoard;
-            SquarePool[] pools = new SquarePool[4]
-                { DataSet.genIpokemon, DataSet.genIcleanedup, DataSet.genIfullyevolved, DataSet.genIIpokemon};
+            SquarePool[] pools = new SquarePool[5]
+                { DataSet.genIpokemon, DataSet.genIcleanedup, DataSet.genIfullyevolved, DataSet.genIIpokemon, DataSet.genIIIfullyevolved};
 
             int userChoice = 2;
 
             Console.WriteLine("Pokemon Board Generator\n\n" +
                 "Choose mode:\n" +
-                "1. Full 151\n" +
-                "2. Starters Evolved\n" +
-                "3. All Evolved\n" +
-                "4. Gen I + II Full");
+                "   1. Full 151\n" +
+                "   2. Starters Evolved\n" +
+                "   3. All Evolved\n" +
+                "   4. Gen I + II Full\n" +
+                "   5. Gen III All Evolved");
             Console.Write("? ");
 
             try {
@@ -131,7 +132,7 @@ namespace pokemon_board_generator
 
             // You can uncomment this if you want to see the board.
             // If you want a surprise, leave it alone!
-            Console.WriteLine(dump);
+            //Console.WriteLine(dump);
 
             Clipboard.SetText(dump);
             Console.WriteLine("Copied board to clipboard!");

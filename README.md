@@ -23,3 +23,6 @@ No Pokemon will appear in their base forms. You must max evolve all of your Poke
 
 ### 4. Gen I + II Full
 All Pokemon from the first two generations will appear with no restrictions.
+
+### 5. Gen III All Evolved
+All Pokemon from the Gen III are eligible in the final (or only) forms. Baby Pokemon introduced are represented in their Gen II final forms.
