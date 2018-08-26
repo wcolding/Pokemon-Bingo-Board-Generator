@@ -51,7 +51,7 @@ namespace pokemon_board_generator
     
     class BoardGenerator
     {
-        static void PickSquares(SquarePool input, out SquarePool picked, int size, int seed=-1)
+        static void PickSquares(SquarePool input, out SquarePool picked, int size, int lMax = 3, int seed=-1)
         {
             SquarePool workingInputPool = input;
             SquarePool workingOutputPool = new SquarePool();
@@ -66,7 +66,8 @@ namespace pokemon_board_generator
 
             // Pick a Pokemon from the input pool
             int curPokemon;
-            
+            int lCount = 0;
+
             for (int square = 0; square < size; square++)
             {
                 curPokemon = rng.Next(0, workingInputPool.options.Count);
@@ -76,6 +77,15 @@ namespace pokemon_board_generator
                 {
                     // Non-evolutionary Pokemon just get removed from the input pool
                     workingInputPool.options.RemoveAt(curPokemon);
+                }
+                else if (workingInputPool.options[curPokemon].lineage == ObjectiveType.Legendary)
+                {
+                    // Legendaries are limited to lMax value
+                    lCount++;
+                    if (lCount >= lMax)
+                        workingInputPool.options.RemoveAll(option => option.lineage == ObjectiveType.Legendary);
+                    else
+                        workingInputPool.options.RemoveAt(curPokemon);
                 }
                 else
                 {

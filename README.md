@@ -1,6 +1,6 @@
 # Pokemon Bingo Board Generator
 #### by Will Colding
-## Creates a custom Bingosync board with the original 151 Pokemon and nothing else
+## Creates a custom Bingosync board with ~~the original 151~~ Pokemon and ~~nothing else~~ no other objectives.
 
 Simply run it, select a mode, and the program will copy a formatted Bingosync board to the clipboard.
 
