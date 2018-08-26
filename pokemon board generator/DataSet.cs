@@ -931,7 +931,7 @@ namespace pokemon_board_generator
             // Baby evolutions
             new Square("Wobbuffet", ObjectiveType.Wobbuffet),
             new Square("Marill", ObjectiveType.Marill),
-            new Square("Azurill", ObjectiveType.Marill),
+            new Square("Azumarill", ObjectiveType.Marill),
             
             }
         };
@@ -1018,7 +1018,7 @@ namespace pokemon_board_generator
 
             // Baby evolutions
             new Square("Wobbuffet", ObjectiveType.Wobbuffet),
-            new Square("Azurill", ObjectiveType.Marill),
+            new Square("Azumarill", ObjectiveType.Marill),
 
             }
         };
