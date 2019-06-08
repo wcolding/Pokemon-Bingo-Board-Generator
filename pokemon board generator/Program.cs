@@ -1,4 +1,4 @@
-﻿/* Pokemon Bingo Board Generator v1.1
+﻿/* Pokemon Bingo Board Generator v1.2.0
  * by Will Colding
  * 
  * Generates a custom board for use with Bingosync, with only Pokemon
@@ -12,98 +12,14 @@ using System.Windows.Forms;
 
 namespace pokemon_board_generator
 {
-    public class SquarePool
-    {
-        public List<Square> options;
-        
-        public string JSONout()
-        {
-            if (options.Count < 25)
-                return "List not fully populated!";
-
-            string output = "[\n";
-            
-            for (int i = 0; i < options.Count; i++)
-            {
-                output += String.Format(" {{\"name\": \"{0}\"}}", options[i].name);
-
-                if (i != options.Count-1)
-                    output += ",";
-                output += "\n";
-            }
-
-            output += "]";
-            return output;
-        }
-    }
-
-    public class Square
-    {
-        public string name;
-        public ObjectiveType lineage;
-
-        public Square(string _n, ObjectiveType _l)
-        {
-            name = _n;
-            lineage = _l;
-        }
-    }
-    
-    class BoardGenerator
-    {
-        static void PickSquares(SquarePool input, out SquarePool picked, int size, int lMax = 3, int seed=-1)
-        {
-            SquarePool workingInputPool = input;
-            SquarePool workingOutputPool = new SquarePool();
-            workingOutputPool.options = new List<Square>();
-
-            if (seed == -1)
-            {
-                seed = (int)System.DateTime.UtcNow.Millisecond;
-            }
-
-            Random rng = new Random(seed);
-
-            // Pick a Pokemon from the input pool
-            int curPokemon;
-            int lCount = 0;
-
-            for (int square = 0; square < size; square++)
-            {
-                curPokemon = rng.Next(0, workingInputPool.options.Count);
-                workingOutputPool.options.Add(workingInputPool.options[curPokemon]);
-                
-                if (workingInputPool.options[curPokemon].lineage == ObjectiveType.Single)
-                {
-                    // Non-evolutionary Pokemon just get removed from the input pool
-                    workingInputPool.options.RemoveAt(curPokemon);
-                }
-                else if (workingInputPool.options[curPokemon].lineage == ObjectiveType.Legendary)
-                {
-                    // Legendaries are limited to lMax value
-                    lCount++;
-                    if (lCount >= lMax)
-                        workingInputPool.options.RemoveAll(option => option.lineage == ObjectiveType.Legendary);
-                    else
-                        workingInputPool.options.RemoveAt(curPokemon);
-                }
-                else
-                {
-                    // Evolutionary Pokemon get removed with their entire lineage
-                    ObjectiveType family = workingInputPool.options[curPokemon].lineage;
-                    workingInputPool.options.RemoveAll(option => option.lineage == family);
-                }
-            }
-
-            picked = workingOutputPool;
-        }
+    class CLI { 
 
         [STAThreadAttribute]
         static void Main(string[] args)
         {
             SquarePool myBoard;
-            SquarePool[] pools = new SquarePool[5]
-                { DataSet.genIpokemon, DataSet.genIcleanedup, DataSet.genIfullyevolved, DataSet.genIIpokemon, DataSet.genIIIfullyevolved};
+            SquarePool[] pools = new SquarePool[6]
+                { DataSet.genIpokemon, DataSet.genIcleanedup, DataSet.genIfullyevolved, DataSet.genIIpokemon, DataSet.genIIIfullyevolved, DataSet.liquidcrystal};
 
             int userChoice = 2;
 
@@ -113,10 +29,12 @@ namespace pokemon_board_generator
                 "   2. Starters Evolved\n" +
                 "   3. All Evolved\n" +
                 "   4. Gen I + II Full\n" +
-                "   5. Gen III All Evolved");
+                "   5. Gen III All Evolved\n" +
+                "   6. Liquid Crystal");
             Console.Write("? ");
 
-            try {
+            try
+            {
                 userChoice = Convert.ToInt32(Console.ReadLine()) - 1;
             }
             catch
@@ -137,12 +55,12 @@ namespace pokemon_board_generator
 
             Console.WriteLine("Generating Pokemon board...");
 
-            PickSquares(pools[userChoice], out myBoard, 25);
+            BoardGenerator.PickSquares(pools[userChoice], out myBoard, 25);
             string dump = myBoard.JSONout();
 
             // You can uncomment this if you want to see the board.
             // If you want a surprise, leave it alone!
-            //Console.WriteLine(dump);
+            // Console.WriteLine(dump);
 
             Clipboard.SetText(dump);
             Console.WriteLine("Copied board to clipboard!");

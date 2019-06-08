@@ -26,3 +26,6 @@ All Pokemon from the first two generations will appear with no restrictions.
 
 ### 5. Gen III All Evolved
 All Pokemon from the Gen III are eligible in the final (or only) forms. Baby Pokemon introduced are represented in their Gen II final forms.
+
+### 6. Liquid Crystal
+All Pokemon available in the Liquid Crystal romhack.

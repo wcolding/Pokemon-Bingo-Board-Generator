@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pokemon_board_generator
 {
-    enum GameVersion: uint
+    public enum GameVersion: uint
     {
         Red         = 0x0001,
         Blue        = 0x0002,
@@ -50,17 +50,23 @@ namespace pokemon_board_generator
         Shield      = 0x80000000
     }
 
-    enum EvolveType : int
+    public enum Acquisition : int
     {
-        Level,
-        Stone,
-        Trading,
-        Friendship,
-        Move,
-        Location,
-        Time,
-        ItemHold,
-        Gender,
-        Version
+        Unattainable,   // Unavailable in this game
+        Normal,         // Starter, wild, NPC trade, gift or evolvable through level or stone
+        Special,        // Requires friendship, move, location, time, a held item, or specific gender
+        Trade,          // Requires trade, be it for any access or evolution
+        Event           // Requires an event
+    }
+
+    public static class PokemonAccess
+    {
+        public static GameVersion gameRules = GameVersion.FireRed | GameVersion.LeafGreen | GameVersion.Ruby | GameVersion.Sapphire | GameVersion.Yellow;
+        public static readonly int VersionCount = 32;
+        public static List<Pokemon> Pokedex = new List<Pokemon>();
+        public static bool GameIsInRules(GameVersion game)
+        {
+            return (game & gameRules) != 0;
+        }
     }
 }
