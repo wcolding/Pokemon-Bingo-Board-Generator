@@ -11,6 +11,7 @@ namespace pokemon_board_generator
         public readonly int number;
         public readonly string name;
         public readonly int evFrom;
+        public readonly bool hasAlolanForm;
         public GameVersion gameAccess;
         public Acquisition[] methods;
 

@@ -45,6 +45,25 @@ namespace pokemon_board_generator
 
     static class BoardGenerator
     {
+        public static void PickSquares(out List<Pokemon> board, int seed = -1)
+        {
+            int c = PokemonAccess.RegionalPokedex.Count;
+            if (c < 25)
+                throw new Exception("Not enough usable Pokemon to generate board!");
+
+            if (seed == -1)
+            {
+                seed = (int)System.DateTime.UtcNow.Millisecond;
+            }
+
+            Random rng = new Random(seed);
+            List<Pokemon> workingBoard = new List<Pokemon>();
+
+            
+
+            board = workingBoard;
+        }
+
         public static void PickSquares(SquarePool input, out SquarePool picked, int size, int lMax = 3, int seed = -1)
         {
             SquarePool workingInputPool = input;

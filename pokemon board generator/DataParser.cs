@@ -9,7 +9,7 @@ namespace pokemon_board_generator
         string path = "Pokedex.csv";
         TextFieldParser csv;
         int lineLength = PokemonAccess.VersionCount + 3;
-        int entries = 5;
+        int entries = 38;
         string[] buffer;
         
         public DataParser()
@@ -23,7 +23,7 @@ namespace pokemon_board_generator
             buffer = new string[lineLength];
             buffer = csv.ReadFields();  // Reads header
             for (int i=0; i < entries; i++)
-                LineToPokemon();
+                PokemonAccess.Pokedex.Add(LineToPokemon());
 
             csv.Dispose();
         }
@@ -34,16 +34,16 @@ namespace pokemon_board_generator
             try
             {
                 Pokemon currentPokemon = new Pokemon(Convert.ToInt32(buffer[0]), buffer[1], Convert.ToInt32(buffer[2]));
-                Console.WriteLine("#{0:D3} {1}\n", currentPokemon.number, currentPokemon.name);
+                //Console.WriteLine("#{0:D3} {1}\n", currentPokemon.number, currentPokemon.name);
                 for (int i = 3; i < lineLength; i++)
                 {
                     Acquisition a = (Acquisition)Convert.ToInt32(buffer[i]);
                     currentPokemon.methods[i - 3] = a;
                     GameVersion b = (GameVersion)(1 << (i - 3));
-                    if (PokemonAccess.GameIsInRules(b))
-                        Console.WriteLine("{0} ({1})", a, b);
+                    //if (PokemonAccess.GameIsInRules(b))
+                        //Console.WriteLine("{0} ({1})", a, b);
                 }
-                Console.WriteLine();
+                //Console.WriteLine();
 
                 return currentPokemon;
             }
