@@ -19,7 +19,7 @@ namespace pokemon_board_generator
         {
             SquarePool myBoard;
             SquarePool[] pools = new SquarePool[7]
-                { DataSet.genIpokemon, DataSet.genIcleanedup, DataSet.genIfullyevolved, DataSet.genIIpokemon, DataSet.genIIslim, DataSet.genIIIfullyevolved, DataSet.liquidcrystal};
+                { DataSet.genIpokemon, DataSet.genIcleanedup, DataSet.genIfullyevolved, DataSet.genIIpokemon, GoldSilver.genIIslim, DataSet.genIIIfullyevolved, DataSet.liquidcrystal};
 
             int userChoice = 2;
 
