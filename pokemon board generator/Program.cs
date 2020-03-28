@@ -18,8 +18,8 @@ namespace pokemon_board_generator
         static void Main(string[] args)
         {
             SquarePool myBoard;
-            SquarePool[] pools = new SquarePool[6]
-                { DataSet.genIpokemon, DataSet.genIcleanedup, DataSet.genIfullyevolved, DataSet.genIIpokemon, DataSet.genIIIfullyevolved, DataSet.liquidcrystal};
+            SquarePool[] pools = new SquarePool[7]
+                { DataSet.genIpokemon, DataSet.genIcleanedup, DataSet.genIfullyevolved, DataSet.genIIpokemon, DataSet.genIIslim, DataSet.genIIIfullyevolved, DataSet.liquidcrystal};
 
             int userChoice = 2;
 
@@ -29,8 +29,9 @@ namespace pokemon_board_generator
                 "   2. Starters Evolved\n" +
                 "   3. All Evolved\n" +
                 "   4. Gen I + II Full\n" +
-                "   5. Gen III All Evolved\n" +
-                "   6. Liquid Crystal");
+                "   5. Gen II Lite - Johto Only for G/S\n" +
+                "   6. Gen III All Evolved\n" +
+                "   7. Liquid Crystal");
             Console.Write("? ");
 
             try
@@ -55,12 +56,12 @@ namespace pokemon_board_generator
 
             Console.WriteLine("Generating Pokemon board...");
 
-            BoardGenerator.PickSquares(pools[userChoice], out myBoard, 25);
+            BoardGenerator.PickSquares(pools[userChoice], out myBoard, 25, 1);
             string dump = myBoard.JSONout();
 
             // You can uncomment this if you want to see the board.
             // If you want a surprise, leave it alone!
-            // Console.WriteLine(dump);
+            //Console.WriteLine(dump);
 
             Clipboard.SetText(dump);
             Console.WriteLine("Copied board to clipboard!");

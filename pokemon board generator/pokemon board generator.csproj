@@ -47,6 +47,7 @@
     <Compile Include="Board.cs" />
     <Compile Include="DataParser.cs" />
     <Compile Include="DataSet.cs" />
+    <Compile Include="GoldSilver.cs" />
     <Compile Include="Pokemon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -179,7 +179,7 @@ namespace pokemon_board_generator
             new Square("Clefairy", ObjectiveType.Clefairy),
             new Square("Clefable", ObjectiveType.Clefairy),
             new Square("Vulpix", ObjectiveType.Vulpix),
-            new Square("Ninetails", ObjectiveType.Vulpix),
+            new Square("Ninetales", ObjectiveType.Vulpix),
             new Square("Jigglypuff", ObjectiveType.Jigglypuff),
             new Square("Wigglytuff", ObjectiveType.Jigglypuff),
             new Square("Zubat", ObjectiveType.Zubat),
@@ -329,7 +329,7 @@ namespace pokemon_board_generator
             new Square("Clefairy", ObjectiveType.Clefairy),
             new Square("Clefable", ObjectiveType.Clefairy),
             new Square("Vulpix", ObjectiveType.Vulpix),
-            new Square("Ninetails", ObjectiveType.Vulpix),
+            new Square("Ninetales", ObjectiveType.Vulpix),
             new Square("Jigglypuff", ObjectiveType.Jigglypuff),
             new Square("Wigglytuff", ObjectiveType.Jigglypuff),
             new Square("Zubat", ObjectiveType.Zubat),
@@ -462,7 +462,7 @@ namespace pokemon_board_generator
             new Square("Nidoqueen", ObjectiveType.Nidoran_F),
             new Square("Nidoking", ObjectiveType.Nidoran_M),
             new Square("Clefable", ObjectiveType.Clefairy),
-            new Square("Ninetails", ObjectiveType.Vulpix),
+            new Square("Ninetales", ObjectiveType.Vulpix),
             new Square("Wigglytuff", ObjectiveType.Jigglypuff),
             new Square("Golbat", ObjectiveType.Zubat),
             new Square("Vileplume", ObjectiveType.Oddish),
@@ -623,7 +623,7 @@ namespace pokemon_board_generator
             new Square("Smoochum", ObjectiveType.Jynx),
             new Square("Elekid", ObjectiveType.Electabuzz),
             new Square("Magby", ObjectiveType.Magmar),
-            new Square("Militank", ObjectiveType.Single),
+            new Square("Miltank", ObjectiveType.Single),
             new Square("Blissey", ObjectiveType.Chansey),
             new Square("Raikou", ObjectiveType.Legendary),
             new Square("Entei", ObjectiveType.Legendary),
@@ -673,7 +673,7 @@ namespace pokemon_board_generator
             new Square("Clefairy", ObjectiveType.Clefairy),
             new Square("Clefable", ObjectiveType.Clefairy),
             new Square("Vulpix", ObjectiveType.Vulpix),
-            new Square("Ninetails", ObjectiveType.Vulpix),
+            new Square("Ninetales", ObjectiveType.Vulpix),
             new Square("Jigglypuff", ObjectiveType.Jigglypuff),
             new Square("Wigglytuff", ObjectiveType.Jigglypuff),
             new Square("Zubat", ObjectiveType.Zubat),
@@ -789,6 +789,8 @@ namespace pokemon_board_generator
             }
         };
 
+        
+
         public static SquarePool liquidcrystal = new SquarePool()
         {
             options = new List<Square>{
@@ -875,7 +877,7 @@ namespace pokemon_board_generator
             new Square("Smoochum", ObjectiveType.Jynx),
             new Square("Elekid", ObjectiveType.Electabuzz),
             new Square("Magby", ObjectiveType.Magmar),
-            new Square("Militank", ObjectiveType.Single),
+            new Square("Miltank", ObjectiveType.Single),
             new Square("Blissey", ObjectiveType.Chansey),
             new Square("Raikou", ObjectiveType.Legendary),
             new Square("Entei", ObjectiveType.Legendary),
@@ -925,7 +927,7 @@ namespace pokemon_board_generator
             new Square("Clefairy", ObjectiveType.Clefairy),
             new Square("Clefable", ObjectiveType.Clefairy),
             new Square("Vulpix", ObjectiveType.Vulpix),
-            new Square("Ninetails", ObjectiveType.Vulpix),
+            new Square("Ninetales", ObjectiveType.Vulpix),
             new Square("Jigglypuff", ObjectiveType.Jigglypuff),
             new Square("Wigglytuff", ObjectiveType.Jigglypuff),
             new Square("Zubat", ObjectiveType.Zubat),
