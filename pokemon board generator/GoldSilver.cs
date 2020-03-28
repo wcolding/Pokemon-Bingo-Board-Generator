@@ -110,14 +110,11 @@ namespace pokemon_board_generator
             new Square("Sandslash", ObjectiveType.Sandshrew),
             new Square("Nidoran ♀", ObjectiveType.Nidoran_F),
             new Square("Nidorina", ObjectiveType.Nidoran_F),
-            new Square("Nidoqueen", ObjectiveType.Nidoran_F), // pain in the ass
             new Square("Nidoran ♂", ObjectiveType.Nidoran_M),
             new Square("Nidorino", ObjectiveType.Nidoran_M),
-            new Square("Nidoking", ObjectiveType.Nidoran_M), // pain
             new Square("Vulpix", ObjectiveType.Vulpix),
             new Square("Ninetales", ObjectiveType.Vulpix),
             new Square("Jigglypuff", ObjectiveType.Jigglypuff),
-            new Square("Wigglytuff", ObjectiveType.Jigglypuff), // pain
             new Square("Zubat", ObjectiveType.Zubat),
             new Square("Golbat", ObjectiveType.Zubat),
             new Square("Oddish", ObjectiveType.Oddish), // extremely time-locked to Ilex Forest
