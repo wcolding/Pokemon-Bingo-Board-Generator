@@ -1,7 +1,0 @@
-Pokemon Board Generator
-
-Creates a 5x5 Bingosync custom board with the original 151 Pokemon and copies it to clipboard.
-
-- Starters will only appear in their final forms (Venusaur/Charizard/Blastoise)
-- Only 1 Pokemon per "family" will appear (E.g. you won't get Abra and Alakazam in the same board)
-- Everything else is fair game, as this is for the Ultraviolet romhack
