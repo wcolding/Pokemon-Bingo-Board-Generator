@@ -9,3 +9,4 @@ C:\Users\Will\source\repos\Pokemon-Bingo-Board-Generator\pokemon board generator
 C:\Users\Will\source\repos\Pokemon-Bingo-Board-Generator\pokemon board generator\bin\Release\pokemon board generator.pdb
 C:\Users\Will\source\repos\Pokemon-Bingo-Board-Generator\pokemon board generator\obj\Release\pokemon board generator.exe
 C:\Users\Will\source\repos\Pokemon-Bingo-Board-Generator\pokemon board generator\obj\Release\pokemon board generator.pdb
+C:\Users\Will\source\repos\Pokemon-Bingo-Board-Generator\pokemon board generator\obj\Release\pokemon board generator.csprojAssemblyReference.cache

@@ -9,13 +9,10 @@ namespace pokemon_board_generator
         public static SquarePool genIIslim = new SquarePool()
         {
             options = new List<Square>{
-            new Square("Chickorita", ObjectiveType.Chickorita),
             new Square("Bayleef", ObjectiveType.Chickorita),
             new Square("Meganium", ObjectiveType.Chickorita),
-            new Square("Cyndaquil", ObjectiveType.Cyndaquil),
             new Square("Quilava", ObjectiveType.Cyndaquil),
             new Square("Typhlosion", ObjectiveType.Cyndaquil),
-            new Square("Totodile", ObjectiveType.Totodile),
             new Square("Croconaw", ObjectiveType.Totodile),
             new Square("Feraligatr", ObjectiveType.Totodile),
             new Square("Sentret", ObjectiveType.Sentret),

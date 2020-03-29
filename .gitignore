@@ -1,0 +1,6 @@
+# Ignore build and Visual Studio files
+/.vs/*
+*.user
+*.exe
+/pokemon board generator/bin/*
+/pokemon board generator/obj/*
