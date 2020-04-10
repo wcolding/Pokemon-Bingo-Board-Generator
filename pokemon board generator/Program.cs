@@ -1,4 +1,4 @@
-﻿/* Pokemon Bingo Board Generator v1.2.0
+﻿/* Pokemon Bingo Board Generator v1.3.0
  * by Will Colding
  * 
  * Generates a custom board for use with Bingosync, with only Pokemon
@@ -18,8 +18,8 @@ namespace pokemon_board_generator
         static void Main(string[] args)
         {
             SquarePool myBoard;
-            SquarePool[] pools = new SquarePool[7]
-                { DataSet.genIpokemon, DataSet.genIcleanedup, DataSet.genIfullyevolved, DataSet.genIIpokemon, GoldSilver.genIIslim, DataSet.genIIIfullyevolved, DataSet.liquidcrystal};
+            SquarePool[] pools = new SquarePool[8]
+                { DataSet.genIpokemon, DataSet.genIcleanedup, DataSet.genIfullyevolved, DataSet.genIIpokemon, GoldSilver.genIIslim, DataSet.genIIIfullyevolved, DataSet.liquidcrystal, RSE.genIIIrse};
 
             int userChoice = 2;
 
@@ -31,7 +31,8 @@ namespace pokemon_board_generator
                 "   4. Gen I + II Full\n" +
                 "   5. Gen II Lite - Johto Only for G/S\n" +
                 "   6. Gen III All Evolved\n" +
-                "   7. Liquid Crystal");
+                "   7. Liquid Crystal\n" +
+                "   8. R/S/E Full");
             Console.Write("? ");
 
             try
